@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+    <style>
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        background-image: url(/cursoEmVideo/fundo.jpg);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .box {
+        width: 500px;
+        height: 500px;
+        color: antiquewhite;
+        background: rgba(117, 45, 111, 0.459);
+    }
+    body {
+        margin: 0px;
+    }
+    p{
+        font-size: 1.5em;
+    }
+    .texxte{
+        padding: 25px;
+    }
+    input[type="text" i] {
+        padding: 3px 5px;
+    }
+    #res{
+        font-size: 20px;
+    }
+    #botao {
+        background: #d7020294;
+        width: 150px;
+        height: 28px;
+        border-color: #e91e63;
+        border-radius: 2px;
+        color: white;
+        font: normal 12pt arial;
+
+    }
+        
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <div class="box">
+            <h1>Múltiplicando números</h1> 
+                <p>Vamos começar!!</p>
+                <div >
+                    <div class="texxte">
+                        <label for="texto1">Digite um número</label><br>
+                        <input classe="osinput" type="text" name="texto1" id="texto1">
+                    </div>
+                    <div class="texxte">
+                        <label for="texto2">Digite outro número</label><br>
+                        <input classe="osinput" type="text" name="texto2" id="texto2">
+                    </div>
+                    <div class="texxte">
+                         <input type="button" id="botao" value="somar" onclick="somar()">
+                    </div>
+                    
+                    <div id="res">Resultado</div>
+                </div>
+        </div>
+        </div>
+
+        <script>
+            function somar(){
+                var tn1 = window.document.getElementById('texto1')
+                var tn2 = window.document.querySelector('input#texto2')
+                var res = window.document.querySelector('div#res')
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = n1 * n2
+                res.innerHTML = `A multiplicação de ${n1} x ${n2} é : ${s}`
+                console.log(res)
+            }
+        </script>
+    </body>
+</html>
